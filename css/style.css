@@ -3,8 +3,8 @@
   --grid-gap: 0;
   --bg-color: rgb(31, 31, 31);
   --primary-color: rgb(215, 215, 215);
-  --header-height: 50px;
-  --gameboard-height: calc(100vh - var(--header-height));
+  --header-height: 80px;
+  --gameboard-height: calc(100vh - var(--header-height) - 30px);
   --row-height: calc(var(--gameboard-height) / 3);
 }
 
@@ -20,8 +20,19 @@ body {
 }
 
 header {
-  text-align: center;
   height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  padding: 5px 15px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-left: 5px;
 }
 
 .container {
@@ -30,10 +41,6 @@ header {
   padding-left: var(--grid-padding);
   padding-right: var(--grid-padding);
 }
-
-/* #gameboard {
-  position: relative;
-} */
 
 .row {
   margin-left: calc(-1 * var(--grid-padding));

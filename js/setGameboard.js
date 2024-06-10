@@ -42,6 +42,7 @@ function initNewGame() {
 
   // Generate game board
   const mainEl = document.querySelector("main");
+  mainEl.innerHTML = "";
   const gameboardEl = document.createElement("div");
 
   // Generate the grid
