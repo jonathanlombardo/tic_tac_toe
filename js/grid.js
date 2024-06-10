@@ -126,6 +126,7 @@ function isGameOver() {
   // return winner or undefined
   console.log({ gameOver });
   if (gameOver) {
+    const boxes = document.querySelectorAll(".box");
     boxes.forEach((box) => {
       box.classList.add("disabled");
     });
